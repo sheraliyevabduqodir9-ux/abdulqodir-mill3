@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galereya | ABDULQODIR MILL</title>
+    <meta name="description" content="ABDULQODIR MILL korxonasi va mahsulotlari fotogalereyasi.">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #123D30;
+            min-height: 260px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 18px 16px;
+            color: white;
+            font-weight: 700;
+            background: linear-gradient(transparent, rgba(0,0,0,.8));
+        }
+
+        @media (max-width: 760px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .gallery-item {
+                min-height: 180px;
+            }
+
+            .gallery-item img {
+                height: 190px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">
+            ABDULQODIR <span>MILL</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Menyuni ochish" aria-expanded="false">☰</button>
+
+        <nav class="nav">
+            <a href="index.html" data-uz="Bosh sahifa" data-ru="Главная" data-en="Home">Bosh sahifa</a>
+            <a href="about.html" data-uz="Biz haqimizda" data-ru="О компании" data-en="About us">Biz haqimizda</a>
+            <a href="products.html" data-uz="Mahsulotlar" data-ru="Продукция" data-en="Products">Mahsulotlar</a>
+            <a href="production.html" data-uz="Ishlab chiqarish" data-ru="Производство" data-en="Production">Ishlab chiqarish</a>
+            <a href="quality.html" data-uz="Sifat nazorati" data-ru="Контроль качества" data-en="Quality control">Sifat nazorati</a>
+            <a href="gallery.html" data-uz="Galereya" data-ru="Галерея" data-en="Gallery">Galereya</a>
+            <a href="contact.html" data-uz="Aloqa" data-ru="Контакты" data-en="Contact">Aloqa</a>
+        </nav>
+
+        <select class="language-select" aria-label="Tilni tanlang">
+            <option value="uz">UZ</option>
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+        </select>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-uz="Fotogalereya"
+                data-ru="Фотогалерея"
+                data-en="Photo gallery">Fotogalereya</h1>
+
+            <p data-uz="ABDULQODIR MILL — korxona va mahsulotlar galereyasi."
+               data-ru="ABDULQODIR MILL — галерея предприятия и продукции."
+               data-en="ABDULQODIR MILL — company and product gallery.">
+                ABDULQODIR MILL — korxona va mahsulotlar galereyasi.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2 class="section-title"
+                    data-uz="Bizning galereyamiz"
+                    data-ru="Наша галерея"
+                    data-en="Our gallery">
+                    Bizning galereyamiz
+                </h2>
+
+                <p class="section-description"
+                   data-uz="Korxona faoliyati, ishlab chiqarish va mahsulotlar bilan tanishing."
+                   data-ru="Познакомьтесь с предприятием, производством и продукцией."
+                   data-en="Explore the company, production and products.">
+                    Korxona faoliyati, ishlab chiqarish va mahsulotlar bilan tanishing.
+                </p>
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="images/factory.jpg" alt="Korxona binosi">
+                    <div class="gallery-caption"
+                         data-uz="Korxona"
+                         data-ru="Предприятие"
+                         data-en="Company">
+                        Korxona
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/production.jpg" alt="Ishlab chiqarish jarayoni">
+                    <div class="gallery-caption"
+                         data-uz="Ishlab chiqarish"
+                         data-ru="Производство"
+                         data-en="Production">
+                        Ishlab chiqarish
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/flour-1.jpg" alt="Un mahsuloti">
+                    <div class="gallery-caption"
+                         data-uz="Un mahsulotlari"
+                         data-ru="Мучная продукция"
+                         data-en="Flour products">
+                        Un mahsulotlari
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/flour-2.jpg" alt="Un mahsuloti">
+                    <div class="gallery-caption"
+                         data-uz="Mahsulotlar"
+                         data-ru="Продукция"
+                         data-en="Products">
+                        Mahsulotlar
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/grain.jpg" alt="Bug‘doy donlari">
+                    <div class="gallery-caption"
+                         data-uz="Bug‘doy doni"
+                         data-ru="Зерно пшеницы"
+                         data-en="Wheat grain">
+                        Bug‘doy doni
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/hero.jpg" alt="ABDULQODIR MILL">
+                    <div class="gallery-caption">
+                        ABDULQODIR MILL
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-banner">
+        <div class="container contact-banner-inner">
+
+            <h2 data-uz="Biz haqimizda ko‘proq bilib oling"
+                data-ru="Узнайте больше о нас"
+                data-en="Discover more about us">
+                Biz haqimizda ko‘proq bilib oling
+            </h2>
+
+            <a href="about.html" class="btn btn-gold"
+               data-uz="Biz haqimizda"
+               data-ru="О компании"
+               data-en="About us">
+                Biz haqimizda
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>ABDULQODIR MILL</h3>
+                <p data-uz="Sifat an'anadan boshlanadi."
+                   data-ru="Качество начинается с традиций."
+                   data-en="Quality begins with tradition.">
+                    Sifat an'anadan boshlanadi.
+                </p>
+            </div>
+
+            <div>
+                <h3 data-uz="Aloqa" data-ru="Контакты" data-en="Contact">Aloqa</h3>
+                <p data-company-phone>+998 XX XXX XX XX</p>
+                <p data-company-email>info@abdulqodirmill.uz</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span data-current-year></span> ABDULQODIR MILL.
+        </div>
+
+    </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
